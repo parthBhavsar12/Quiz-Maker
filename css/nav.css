@@ -1,0 +1,123 @@
+:root{
+    --light-grey: #f3f3ea;
+    --blue: #233975;
+    --dark-brown: #212015;
+  
+    /* font sizes */
+    --fs-400: 1.4rem;
+    --fs-500: 1.6rem;
+    --fs-600: clamp(3.2rem, 4vw, 6rem);
+}
+@media (min-width: 600px) {
+      :root {
+        --fs-400: 1.6rem;
+        --fs-500: 1.8rem;
+      }
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html{
+      font-size: 62.5%;
+}
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--fs-400);
+    font-weight: 400;
+    background: var(--light-grey);
+    color: var(--dark-brown);
+    min-height: 100vh;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.primary-button{
+    min-height: 3em;
+    padding: 1em 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    color: var(--light-grey);
+    background: var(--blue);
+}
+nav{
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.primary-nav,
+.login-nav{
+    display: none;
+}
+.logo,
+.mobile-nav,
+li{
+    cursor: pointer;
+}
+.logo{
+    color: var(--blue);
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+.container{
+    max-width: 180rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+@media (min-width: 600px) {
+    .container {
+      padding: 0 4rem;
+    }
+}
+.mobile-nav {
+    height: 2rem;
+}
+@media (min-width: 600px) {
+    .mobile-nav {
+      height: 2.5em;
+    }
+}
+@media (min-width:900px) {
+    nav{
+        height: 12rem;
+    }
+    .mobile-nav{
+        display: none;
+    }
+    .login-nav,
+    .primary-nav{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3.5rem;
+    }
+    .primary-nav a:hover{
+        background-color: #233975;
+        display: block;
+        padding: 1rem;
+        color: white;
+    }
+    .logIn:hover{
+        text-decoration: underline;
+        font-size: 1.2em;
+        text-transform: uppercase;
+    }
+}
+nav ul li a:active{
+    border-bottom: 2px solid;
+    text-decoration: underline;
+}

@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.authentication-error{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    align-items: center;
+    opacity: 1;
+}
+.authenticationerror-popup{
+    
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 2rem;
+    transition: transform 0.5s ease;
+    transform: translateY(-2rem);
+    min-width: 70%;
+    min-height: 30vh;
+}
+.authenticationerror-popup .errormessage{
+    font-size: 1.5rem;
+    color: red;
+    text-align: center;
+    margin: 2rem 2rem 1.5rem;
+}
+/* .attend-quiz.active{
+    opacity: 1;
+    pointer-events: all;
+}
+.attendquiz-popup.active{
+    transform: translateY(0rem);
+} 
+.quizcode{
+    font-size: 1.5rem;
+    padding: 1rem;
+} */
+
+.close-errorpopup{
+    margin:1rem 2rem 1.5rem;
+    padding: 1rem 3rem;
+    background: rgb(60, 60, 92);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+@media (min-width:600px) {
+    .authenticationerror-popup{
+        min-width: 50%;
+    }      
+    .authenticationerror-popup h2{
+        background-color: #233975;
+        color: white;
+        padding: 10px;
+        min-width: 30%;
+        text-align: center;
+        border-radius: 0 0 10px 10px;
+    }   
+}
+@media (min-width:900px) {
+    .authenticationerror-popup{
+        min-width: 30%;
+    }
+    .authenticationerror-popup h2{
+        background-color: #233975;
+        color: white;
+        padding: 10px;
+        min-width: 30%;
+        text-align: center;
+        border-radius: 0 0 10px 10px;
+    }   
+}
+.authenticationerror-popup h2{
+    background-color: #233975;
+    color: white;
+    padding: 10px;
+    min-width: 70%;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}  
+form button[type="submit"]{
+    display: block;
+    margin: 20px auto;
+}
+.authenticationerror-popup.dark-theme{
+    background-color: rgb(46, 44, 44);
+    color: var(--text-color);
+}
